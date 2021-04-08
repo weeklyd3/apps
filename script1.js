@@ -1,5 +1,6 @@
 function run() {
   var ifrm = document.getElementById('myframe');
+  ifrm.src="about:blank";
   ifrm = ifrm.contentWindow || ifrm.contentDocument.document || ifrm.contentDocument;
   ifrm.document.open();
   var x=document.getElementById('htmlarea').value;
