@@ -1,14 +1,16 @@
 <html>
     <body>
+        <link rel="stylesheet" href="https://weeklyd3.github.io/resources/style.css" />
         <script>
             var table = document.createElement('table');
-            for (i=0; i<25; i++) {
+            for (i=0; i<50; i++) {
                 table.innerHTML+="<tr>";
-                for (j=0; j<25; j++) {
+                for (j=0; j<50; j++) {
                     table.innerHTML+="<td>1</td><td>2</td><td>3</td>";
                 }
                 table.innerHTML+="</tr>";
             }
+            document.body.append(table);
         </script>
     </body>
 </html>
