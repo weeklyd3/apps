@@ -1,16 +1,26 @@
-<html>
-    <body>
-        <link rel="stylesheet" href="https://weeklyd3.github.io/resources/style.css" />
-        <script>
-            var table = document.createElement('table');
-            for (i=0; i<50; i++) {
-                table.innerHTML+="<tr>";
-                for (j=0; j<50; j++) {
-                    table.innerHTML+="<td>1</td><td>2</td><td>3</td>";
-                }
-                table.innerHTML+="</tr>";
-            }
-            document.body.append(table);
-        </script>
-    </body>
-</html>
+<body>
+<img src="largeimage.png" style="z-index: -1;" />
+<script>var image;function docReady(){image=document.getElementById("someImage"),window.addEventListener("keydown",moveImage),image.style.left=0,image.style.top=0}function moveImage(e){var t=parseInt(document.getElementById("speed").value);37==e.keyCode&&(image.style.left>0?image.style.left=parseInt(image.style.left)-t+"px":image.style.left<0&&(image.style.left=0)),38==e.keyCode&&(image.style.top>0?image.style.top=parseInt(image.style.top)-t+"px":image.style.top<0&&(image.style.top=0)),39==e.keyCode&&(image.style.left<window.innerWidth?image.style.left=parseInt(image.style.left)+t+"px":image.style.left>window.innerWidth&&(image.style.left=window.innerWidth)),40==e.keyCode&&(image.style.top<window.innerHeight?image.style.top=parseInt(image.style.top)+t+"px":image.style.top>window.innerHeight&&(image.style.top=window.innerHeight)),83==e.keycode&&(t=window.prompt("New speed (default=5):","5"),document.getElementById("speed").value=t),console.log(image.style.left+", "+image.style.top)}window.onload=docReady;</script>
+<style>
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+	body {
+	touch-action: none;
+	}
+    #someImage {
+        position: fixed;
+        border: 1px solid black;
+    }
+</style>
+<div style="width: 100%; height: 100%;">
+    <div style="display: none;"><input value="1" type="number" id="speed" /></div>
+    <div id="someImage"><img src="stickman.png" title="S=settings" /></div>
+</div>
+</body>
