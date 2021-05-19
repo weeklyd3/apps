@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Draw!</title>
+   <link rel="stylesheet" href="jquery-drawpad.css" />
+   <link rel="stylesheet" href="https://weeklyd3.github.io/resources/style.css" />
+   <script src="http://hongru.github.io/proj/canvas2image/canvas2image.js"></script>
+   <script>function save(){
+                var canvas = document.getElementsByTagName('canvas')[0];
+                document.getElementById("theimage").src = canvas.toDataURL();
+                Canvas2Image.saveAsPNG(canvas);
+            }</script><style>
+      body {background-color:rgb(248, 255, 227)}
+      .container { margin: 150px auto; max-width: 960px; }
+      #container {
+         width:100%;
+		 height:90%;
+		 position:fixed;
+		 top:0;
+		 left:0;
+      }
+	  canvas {
+	  width:100% !important;
+	  height:80% !important;
+	  }
+   </style>
+   <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+   <script src="jquery-drawpad.js"></script>
+   <script>
+      $(document).ready(function() {
+         $("#target").drawpad();
+      });
+   </script>
+</head>
+<body>
+</div><div class="container">
+   <div id="target" class="drawpad-dashed"></div>
+</div>
+   <button style="height:5%; width:100%; display:block;" onclick="save();">Save file</button>
+<image style="display:none;" id="theimage"></image>
+</body>
+</html>
