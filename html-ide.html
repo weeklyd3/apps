@@ -1,17 +1,19 @@
 <link rel="stylesheet" href="https://weeklyd3.github.io/resources/style.css" />
-<div style="height:10%; width:50%;">
-  <button style="background-color:#00ff00; border:1px solid black; color:#000000; cursor:pointer;" onclick="run()">Run!</button>
-</div>
-<table style="width:100%; height:100%;"><tr>
-<td id="mainarea" style="height:45%; width:100%;" align="left">
-  <textarea style="width:100%; height:100%;" id="htmlarea" placeholder="HTML code goes here"></textarea> 
-</td>
-<td id="mainarea1" style="width:100%; height:45%;"><iframe id="myframe" align="right" style="height:90%; display:inline; width:100%; border:1px solid black;"></iframe></td></tr></table>
+<table style="width: 100%; height: 100%;">
+    <tr>
+        <td id="mainarea" style="height: 100%; width: 50%;" align="left">
+            <textarea style="width: 100%; height: 100%;" id="htmlarea" spellcheck="off" placeholder="automatically running HTML code" oninput="run()"></textarea>
+        </td>
+        <td id="mainarea1" style="width: 50%; height: 100%;"><iframe id="myframe" style="height: 100%; display: inline; width: 100%; border: 1px solid black;"></iframe></td>
+    </tr>
+</table>
 <style>
-textarea { resize:none; }
-#mainarea { float:left; }
-#mainarea1 { float:right; }
-body { overflow:hidden; }
+    textarea {
+        resize: none;
+    }
+    body {
+        overflow: hidden;
+    }
 </style>
 <script src="https://weeklyd3.github.io/resources/jquery.min.js"></script>
-<script src='https://weeklyd3.github.io/apps/script1.js'></script>
+<script src="https://weeklyd3.github.io/apps/script1.js"></script>
